@@ -13,19 +13,20 @@ window.onload=function()
     });
   }
   else */
-  if (flvjs.isSupported() && /*Hls.isSupported() &&*/ !window.navigator.userAgent.match(/Trident.*rv\:11\./) && window.navigator.userAgent.indexOf("MSIE") == -1) {
-    /*
+  if (/*flvjs.isSupported() &&*/ Hls.isSupported() && !window.navigator.userAgent.match(/Trident.*rv\:11\./) && window.navigator.userAgent.indexOf("MSIE") == -1) {
+    alert("HLS")
     var hls = new Hls({
-      liveBackBufferLength:5
+      liveSyncDurationCount:1
     });
     hls.loadSource(url + '/live/victoria559/index.m3u8');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
-  });*/
+  });
 
     //Soporta flvjs
-    
+
+    /*
     var flvPlayer = flvjs.createPlayer({
         type: 'flv',
         url: 'https://' + url + '/live/victoria559.flv'
@@ -41,7 +42,7 @@ window.onload=function()
     var dashPlayer = dashjs.MediaPlayer().create();
     dashPlayer.initialize(video,'https://' + url + '/live/victoria559/index.mpd', true)
 
-  }
+  }*/
 
 
 }
