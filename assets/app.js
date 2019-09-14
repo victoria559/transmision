@@ -43,7 +43,7 @@ window.onload=function()
     var dashPlayer = dashjs.MediaPlayer().create();
     dashPlayer.initialize(video,'https://' + url + '/live/victoria559/index.mpd', true)
 
-  }*/
+  }
 
 
 }
