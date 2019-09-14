@@ -22,7 +22,7 @@ window.onload=function()
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
-  });
+    });
 
     //Soporta flvjs
 
@@ -35,6 +35,7 @@ window.onload=function()
     flvPlayer.attachMediaElement(video);
     flvPlayer.load();
     flvPlayer.play();
+    */
 
   }
   else
