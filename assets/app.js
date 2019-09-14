@@ -12,7 +12,15 @@ window.onload=function()
     video.play();
     });
   }
-  else if (flvjs.isSupported() && !window.navigator.userAgent.match(/Trident.*rv\:11\./) && window.navigator.userAgent.indexOf("MSIE") == -1) {
+  else if (/*flvjs.isSupported() && */Hls.isSupported() && !window.navigator.userAgent.match(/Trident.*rv\:11\./) && window.navigator.userAgent.indexOf("MSIE") == -1) {
+
+    var hls = new Hls();
+    hls.loadSource(url + '/live/victoria559/index.m3u8');
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+  });
+    /*
     //Soporta flvjs
     var flvPlayer = flvjs.createPlayer({
         type: 'flv',
@@ -22,7 +30,7 @@ window.onload=function()
     });
     flvPlayer.attachMediaElement(video);
     flvPlayer.load();
-    flvPlayer.play();
+    flvPlayer.play();*/
   }
   else
   {
