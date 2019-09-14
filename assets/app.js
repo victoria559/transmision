@@ -14,11 +14,11 @@ window.onload=function()
   }
   else */
   if (/*flvjs.isSupported() &&*/ Hls.isSupported() && !window.navigator.userAgent.match(/Trident.*rv\:11\./) && window.navigator.userAgent.indexOf("MSIE") == -1) {
-    alert("HLS")
+
     var hls = new Hls({
       liveSyncDurationCount:1
     });
-    hls.loadSource(url + '/live/victoria559/index.m3u8');
+    hls.loadSource('https:' + url + '/live/victoria559/index.m3u8');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
