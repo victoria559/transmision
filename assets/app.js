@@ -29,12 +29,10 @@ window.onload=function()
         type: 'flv',
         url: url + '/live/victoria559.flv'
     });
-    video.addEventListener("canplay",function(){
-      flvPlayer.play();
-    })
+
     flvPlayer.attachMediaElement(video);
     flvPlayer.load();
-
+    flvPlayer.play();
 
   }
   else
