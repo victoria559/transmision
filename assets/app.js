@@ -18,7 +18,7 @@ window.onload=function()
     var hls = new Hls({
       liveSyncDurationCount:1
     });
-    hls.loadSource('https:' + url + '/live/victoria559/index.m3u8');
+    hls.loadSource('https://' + url + '/live/victoria559/index.m3u8');
     hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED,function() {
       video.play();
