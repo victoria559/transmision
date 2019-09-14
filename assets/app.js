@@ -32,7 +32,10 @@ window.onload=function()
 
     flvPlayer.attachMediaElement(video);
     flvPlayer.load();
-    flvPlayer.play();
+    setTimeout(function(){
+      alert("trying to play")
+      flvPlayer.play();
+    },3000)
 
   }
   else
