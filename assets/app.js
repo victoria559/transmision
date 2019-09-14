@@ -25,10 +25,10 @@ window.onload=function()
   });*/
 
     //Soporta flvjs
-    alert("WS PLAY")
+    
     var flvPlayer = flvjs.createPlayer({
         type: 'flv',
-        url: 'wss://' + url + '/live/victoria559.flv'
+        url: 'https://' + url + '/live/victoria559.flv'
     });
 
     flvPlayer.attachMediaElement(video);
